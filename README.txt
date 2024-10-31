@@ -30,8 +30,8 @@ It acts as a plugin container that can be extended with extra functionality that
 be present in the background at all times. There's a selection of plugins to get started.
 Even if you don't need them I recommend to keep them.
 
-You MUST make sure that EXACTLY ONE of these nodes exists on all of your maps.
-Not zero. Not two. Definitely not three. ONE logic node, and one only one.
+You MUST make sure that EXACTLY ONE "logic" node exists on all of your maps.
+Not zero. Not two. Definitely not three. ONE logic node, and only one.
 (The position/size is not important. It just needs to exist.)
 
 maps/template.xml has it already, in the upper left corner. If you use this as a template
@@ -55,7 +55,10 @@ The scripting framework needs to be loaded as early as possible,
 and since the game initializes nodes in the order they appear in the map file,
 this is the easiest way to ensure that the framework is loaded early.
 
-
+If adding the node in the editor is easier for you, do that,
+and it might just end up working fine.
+But keep this in mind in case problems come up about script functions
+or constants not being present when they should be.
 
 
 Further Aquaria and modding resources are available at:
