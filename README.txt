@@ -60,6 +60,11 @@ and it might just end up working fine.
 But keep this in mind in case problems come up about script functions
 or constants not being present when they should be.
 
+WARNING: This mod framework and the included scripts absolutely require the
+opensource version of Aquaria and the single-Lua-state script interface.
+There's no way around that. Older Steam/GOG/.../Commercial releases won't work.
+They are too limited and buggy to even try and support. Won't do, sorry.
+
 
 Further Aquaria and modding resources are available at:
 
