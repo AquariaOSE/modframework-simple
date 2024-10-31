@@ -1,0 +1,33 @@
+<AnimationLayers>
+    <AnimationLayer/>
+</AnimationLayers>
+
+<Bones>
+    <Bone idx="0" gfx="cathedral-halfdoor" pidx="-1" name="" fh="0" fv="0" gc="1" cr="0"/>
+    <Bone idx="1" gfx="cathedral-halfdoor" pidx="-1" name="" fh="0" fv="0" gc="1" cr="0"/>
+</Bones>
+
+<Animations>
+    <Animation name="idle">
+        <Key e="0 0 0 -157 0 0 0 0 0 0 0 0 0 0 0 0 1 0 145 0 0 "/>
+    </Animation>
+    <Animation name="open">
+        <Key e="0 0 0 -157 0 0 0 0 0 0 0 0 0 0 0 0 1 0 145 0 0 "/>
+        <Key e="2 0 0 -243 0 0 0 0 0 0 0 0 0 0 0 0 1 1 241 0 0 "/>
+    </Animation>
+    <Animation name="close">
+        <Key e="0 0 0 -243 0 0 0 0 0 0 0 0 0 0 0 0 1 1 241 0 0 "/>
+        <Key e="2 0 0 -157 0 0 0 0 0 0 0 0 0 0 0 0 1 0 145 0 0 "/>
+    </Animation>
+    <Animation name="open2">
+        <Key e="0 0 0 -157 0 0 0 0 0 0 0 0 0 0 0 0 1 0 145 0 0 "/>
+        <Key lerp="1" e="1.5 0 0 -243 0 0 0 0 0 0 0 0 0 0 0 0 1 1 241 0 0 "/>
+    </Animation>
+    <Animation name="open2">
+        <Key e="0 0 0 -157 0 0 0 0 0 0 0 0 0 0 0 0 1 0 145 0 0 "/>
+        <Key lerp="1" e="1.5 0 0 -243 0 0 0 0 0 0 0 0 0 0 0 0 1 1 241 0 0 "/>
+    </Animation>
+    <Animation name="opened">
+        <Key e="0 0 0 -243 0 0 0 0 0 0 0 0 0 0 0 0 1 1 241 0 0 "/>
+    </Animation>
+</Animations>

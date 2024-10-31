@@ -1,0 +1,14 @@
+<AnimationLayers>
+    <AnimationLayer/>
+</AnimationLayers>
+
+<Bones>
+    <Bone idx="0" gfx="mithalas-lamp-holder-0001" pidx="1" name="" fh="0" fv="0" gc="0" cr="0"/>
+    <Bone idx="1" gfx="mithalas-lamp-bulb-0001" pidx="-1" name="" fh="0" fv="0" gc="0" cr="0" rbp="1"/>
+</Bones>
+
+<Animations>
+    <Animation name="idle">
+        <Key e="0 0 1 -155 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 "/>
+    </Animation>
+</Animations>
