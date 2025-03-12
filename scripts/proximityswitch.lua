@@ -144,7 +144,8 @@ function damage(me, attacker, bone, damageType, dmg)
     return false
 end
 
-function enterState(me, state)
+function enterState(me)
+    local state = entity_getState(me)
     local setTo
     if state == STATE_ON then
         setTo = true

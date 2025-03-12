@@ -372,6 +372,12 @@ local function resolve(inp)
                 todo[nx] = max(todo[nx] or -1, ord + 1)
             end
         end
+
+        if ord > 100 then
+            local onode = inp[n.originalIdx]._originNode
+            warnLog("CN[" .. node_getName(onode) .. "]: Dependency circle detected! Aborting further ordering attempts")
+            break
+        end
     end
 
     table.sort(nodelist, _sortByOrder)

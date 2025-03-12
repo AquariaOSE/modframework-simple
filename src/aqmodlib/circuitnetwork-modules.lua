@@ -140,7 +140,7 @@ M.opendoor =
         return ret
     end,
     update = function(d, node, dt, _in, _out)
-        local open = d.check(_in, _out)
+        local open = d.check(_out)
         d.dbgword = open and "open" or "closed"
         if d.door ~= 0 then
             doorstate(d.door, open)
@@ -294,7 +294,7 @@ M.countdown =
     init = function(d, node, ...)
         local beginexpr, resetexpr, speed = ...
         local beg = compileExpr(beginexpr)
-        local res, isreset = condition(resetexpr) 
+        local res, isreset = condition(resetexpr)
         d.var = assert(beg.var, "first latch expr must set a variable")
         d.beginf = assert(beg.f)
         d.counter = 0
@@ -344,7 +344,7 @@ M.countup =
     init = function(d, node, ...)
         local beginexpr, whileexpr, speed = ...
         local beg = compileExpr(beginexpr)
-        local res, ison = condition(whileexpr) 
+        local res, ison = condition(whileexpr)
         d.var = assert(beg.var, "first expr must set a variable")
         d.beginf = assert(beg.f)
         d.counter = 0
@@ -443,14 +443,15 @@ M.setswitch =
         d.islatch = islatch
         return kunion(x, latchx)
     end,
-    update = function(d, node, dt, _in, _out)
+    update = function(d, node, dt, _in, _out) -- _out is the set of new values. Always check against those.
         local latch = true -- latch if no expr present
         if d.islatch then
-            latch = d.islatch(_in, _out)
+            --latch = d.islatch(_in, _out) -- buggy, uses the prev. set of values (which is empty on the first call)
+            latch = d.islatch(_out)
         end
         d.latchstate = latch -- for debugging only
         if latch then
-            local on = d.isactive(_in, _out)
+            local on = d.isactive(_out)
             d.on = on
             if d.switch ~= 0 then
                 local targetstate = (d.on and STATE_ON) or STATE_OFF

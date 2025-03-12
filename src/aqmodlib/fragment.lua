@@ -21,9 +21,14 @@ local G =
         yield(t)
     end,
     watch = function(t)
-        disableInput()
+        local inp = isInputEnabled()
+        if inp then
+            disableInput()
+        end
         yield(t)
-        enableInput()
+        if inp then
+            enableInput()
+        end
     end,
 
     yield = yield,

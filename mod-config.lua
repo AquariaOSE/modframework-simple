@@ -35,7 +35,7 @@ local VERSION = 1
 
 local saveVersion = getFlag(FLAG_STARTUP) -- this is initially 0
 if saveVersion == 0 then
-    -- In here, do anything you want to be one exactly once, when the mod is loaded for the first time.
+    -- In here, do anything you want to be done exactly once, when the mod is loaded for the first time.
     -- Since this is run on every map load, you may do save migration if something changes drastically
     -- and your code needs to react to an older savefile.
     
