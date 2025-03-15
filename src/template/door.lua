@@ -1,3 +1,5 @@
+dofile("defines.lua")
+
 local EFFECT_RANGE = 1800
 
 v.dist = 0
